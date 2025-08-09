@@ -1,0 +1,83 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: forum-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: dev
+      config:
+        server-addr: localhost:8848
+        namespace: dev
+        file-extension: yaml
+        group: DEFAULT_GROUP
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        # 认证服务
+        - id: forum-auth
+          uri: lb://forum-auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+        # 用户服务
+        - id: forum-user
+          uri: lb://forum-user
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+        # 版块服务
+        - id: forum-forum
+          uri: lb://forum-forum
+          predicates:
+            - Path=/forum/**
+          filters:
+            - StripPrefix=1
+        # 帖子服务
+        - id: forum-post
+          uri: lb://forum-post
+          predicates:
+            - Path=/post/**
+          filters:
+            - StripPrefix=1
+        # 评论服务
+        - id: forum-comment
+          uri: lb://forum-comment
+          predicates:
+            - Path=/comment/**
+          filters:
+            - StripPrefix=1
+        # 搜索服务
+        - id: forum-search
+          uri: lb://forum-search
+          predicates:
+            - Path=/search/**
+          filters:
+            - StripPrefix=1
+        # 文件服务
+        - id: forum-file
+          uri: lb://forum-file
+          predicates:
+            - Path=/file/**
+          filters:
+            - StripPrefix=1
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 3000ms
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web.reactive: DEBUG

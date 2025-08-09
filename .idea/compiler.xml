@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="forum-file" />
+        <module name="forum-post" />
+        <module name="forum-comment" />
+        <module name="forum-notification" />
+        <module name="forum-auth" />
+        <module name="forum-common" />
+        <module name="forum-forum" />
+        <module name="forum-user" />
+        <module name="forum-search" />
+        <module name="forum-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="forum-auth.main" target="17" />
+      <module name="forum-auth.test" target="17" />
+      <module name="forum-post.main" target="17" />
+      <module name="forum-post.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="forum-auth" options="" />
+      <module name="forum-auth.main" options="-parameters" />
+      <module name="forum-auth.test" options="-parameters" />
+      <module name="forum-comment" options="" />
+      <module name="forum-common" options="" />
+      <module name="forum-file" options="" />
+      <module name="forum-forum" options="" />
+      <module name="forum-gateway" options="" />
+      <module name="forum-notification" options="" />
+      <module name="forum-post" options="" />
+      <module name="forum-post.main" options="-parameters" />
+      <module name="forum-post.test" options="-parameters" />
+      <module name="forum-search" options="" />
+      <module name="forum-user" options="" />
+    </option>
+  </component>
+</project>
