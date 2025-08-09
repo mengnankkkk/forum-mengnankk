@@ -25,8 +25,7 @@
         
         <!-- 数据库相关 -->
         <mysql.version>8.0.33</mysql.version>
-        <mybatis-plus.version>3.5.5</mybatis-plus.version>
-        <mybatis-spring.version>3.0.3</mybatis-spring.version>
+        <mybatis-plus.version>3.5.6</mybatis-plus.version>
         <druid.version>1.2.22</druid.version>
         
         <!-- 工具类 -->
@@ -36,7 +35,6 @@
         
         <!-- API文档 -->
         <knife4j.version>4.5.0</knife4j.version>
-        <swagger-annotations.version>1.6.12</swagger-annotations.version>
         
         <!-- 安全相关 -->
         <jwt.version>0.12.5</jwt.version>
@@ -49,9 +47,6 @@
         
         <!-- 文件存储 -->
         <minio.version>8.5.10</minio.version>
-        
-        <!-- Nacos客户端版本 -->
-        <nacos-client.version>2.3.2</nacos-client.version>
     </properties>
 
     <modules>
@@ -101,26 +96,8 @@
 
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba.nacos</groupId>
-                <artifactId>nacos-client</artifactId>
-                <version>${nacos-client.version}</version>
             </dependency>
 
             <dependency>
@@ -145,12 +122,6 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger-annotations.version}</version>
             </dependency>
 
             <dependency>
