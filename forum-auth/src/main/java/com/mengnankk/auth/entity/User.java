@@ -106,6 +106,10 @@ public class User {
     @TableField(exist = false)
     private List<Permission> permissions;
 
+    @ApiModelProperty(value = "OAuth2账号列表")
+    @TableField(exist = false)
+    private List<OAuth2Account> oauth2Accounts;
+
     // 常量定义
     public static final int STATUS_DISABLED = 0;
     public static final int STATUS_ENABLED = 1;

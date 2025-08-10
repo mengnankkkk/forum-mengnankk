@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,7 +14,6 @@
         <module name="forum-auth" />
         <module name="forum-common" />
         <module name="forum-forum" />
-        <module name="forum-user" />
         <module name="forum-search" />
         <module name="forum-gateway" />
       </profile>
@@ -23,6 +23,7 @@
       <module name="forum-auth.test" target="17" />
       <module name="forum-post.main" target="17" />
       <module name="forum-post.test" target="17" />
+      <module name="forum-user" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

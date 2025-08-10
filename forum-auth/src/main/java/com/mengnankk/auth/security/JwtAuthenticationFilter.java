@@ -74,6 +74,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         return path.startsWith("/api/auth/login") ||
                path.startsWith("/api/auth/register") ||
                path.startsWith("/api/auth/refresh") ||
+               path.startsWith("/api/auth/oauth2") ||
                path.startsWith("/api/auth/verify") ||
                path.startsWith("/health") ||
                path.startsWith("/actuator") ||

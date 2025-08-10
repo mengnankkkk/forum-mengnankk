@@ -57,10 +57,10 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- MyBatis Plus -->
+        <!-- MyBatis Plus Core (仅注解，不包含自动配置) -->
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <artifactId>mybatis-plus-annotation</artifactId>
         </dependency>
 
         <dependency>
